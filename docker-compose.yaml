@@ -1,0 +1,20 @@
+version: '3.9'
+
+
+services:
+  channel_bot:
+    container_name: channel_bot
+    image: ghcr.io/eveneasy/channel_bot:latest
+    environment:
+      TZ: "Europe/Kiev"
+    build:
+      dockerfile: Dockerfile
+    restart: on-failure
+    env_file: .env
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    external: true
+    name: postgres_default

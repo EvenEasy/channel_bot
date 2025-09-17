@@ -1,0 +1,11 @@
+.env
+.venv
+.idea
+.vscode
+logs.txt
+
+*__pycache__
+
+_serviceacct_spreadsheet.json
+
+jobs.db
