@@ -13,6 +13,8 @@ services:
     env_file: .env
     networks:
       - postgres
+    volumes:
+      - "./jobs.db:/jobs.db"
 
 networks:
   postgres:
